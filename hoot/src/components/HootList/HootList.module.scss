@@ -1,0 +1,45 @@
+.HootList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vmin;
+  padding: 2vmin;
+  background-color: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1.5vmin;
+  overflow-y: auto;
+  max-height: 75vh; // keeps feed scrollable but not overflowing
+}
+
+.HootList p {
+  text-align: center;
+  font-size: 1.8vmin;
+  color: var(--text-light);
+  margin: 2vmin 0;
+  font-style: italic;
+}
+
+/* Smooth scrolling */
+.HootList::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.HootList::-webkit-scrollbar-thumb {
+  background: var(--tan-3);
+  border-radius: 1vmin;
+}
+
+.HootList::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .HootList {
+    max-height: 65vh;
+    padding: 1.5vmin;
+  }
+
+  .HootList p {
+    font-size: 1.4rem;
+  }
+}   

@@ -1,0 +1,42 @@
+.HootFeedPage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 6.5fr;
+  grid-template-rows: 1fr;
+  gap: 2vmin;
+  background-color: var(--white);
+  border-radius: 2vmin;
+  padding: 2vmin;
+}
+
+.HootFeedPage aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1.5vmin;
+  padding: 2vmin;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
+  overflow-y: auto;
+  padding-right: 1vmin;
+}
+
+/* Smooth scroll for the feed */
+.feed::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background-color: var(--tan-3);
+  border-radius: 0.5rem;
+}
+
+.feed::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tan-4);
+}

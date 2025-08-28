@@ -1,0 +1,59 @@
+.hootItem {
+  background-color: var(--white);
+  border: 0.1vmin solid var(--tan-3);
+  border-radius: 1vmin;
+  padding: 1.5vmin 2vmin;
+  display: flex;
+  flex-direction: column;
+  gap: 1vmin;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: default;
+}
+
+.hootItem:hover {
+  background-color: var(--tan-1);
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4vmin;
+  color: var(--text-light);
+}
+
+.author {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.timestamp {
+  font-size: 1.2vmin;
+  color: var(--text-light);
+}
+
+.text {
+  font-size: 1.6vmin;
+  color: var(--text-dark);
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-line; /* supports multi-line hoots */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .hootItem {
+    padding: 2.5vmin;
+    gap: 1.5vmin;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+}

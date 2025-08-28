@@ -1,0 +1,56 @@
+.AuthPage {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: var(--white);
+  border-radius: 2vmin;
+  padding: 4vmin;
+  gap: 2vmin;
+}
+
+.toggleTitle {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    color: var(--orange);
+  }
+}
+
+.formContainer {
+  width: min(560px, 90vw);
+  background: var(--tan-1);
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1.5vmin;
+  padding: 2vmin;
+
+  /* Let the inner .form-container (from global styles) fill nicely */
+  :global(.form-container) {
+    margin: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .AuthPage {
+    padding: 3vmin;
+    gap: 1.5vmin;
+  }
+
+  .toggleTitle {
+    font-size: 1.5rem;
+  }
+
+  .formContainer {
+    width: 100%;
+    padding: 3vmin 2vmin;
+  }
+}
